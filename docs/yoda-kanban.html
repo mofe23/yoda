@@ -199,6 +199,7 @@ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			<label>Repositories</label>
 			<select id="repolist" style="width: 350px" class="select2" multiple></select>
 			<span class="tooltip">Repositories to show</span>
+			<input type="button" id="select_all" name="select_all" value="Select All">
 		</div>
 		
 		<div class="field">
@@ -319,6 +320,13 @@ OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			$('#columns').on('change.select2', function (e) {
 				drawKanban();
 			});
+
+            $('#select_all').click(function() {
+                $('#repolist option').prop('selected', true);
+                repoList = 	$("#repolist").val();
+                console.log("List of selected repos is now: " + repoList);
+                updateMilestones();
+            });
 		});
 		
 		// Now for argument decoding.
