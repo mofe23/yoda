@@ -131,7 +131,7 @@ function updateIssueLabelList() {
 	}
 	
 	// Now add to selection list
-	$("#labellist").empty();
+	//$("#labellist").empty();
 	var labelsSelected = false;
 	for (var is = 0; is < issueLabels.length; is++) {
 		var selectLabel = false;
@@ -169,7 +169,7 @@ function updateAssigneeList() {
 	}
 	
 	issueAssignees.sort();
-	$("#assigneelist").empty();
+	//$("#assigneelist").empty();
 	
 	var selectAssigneeList = [];
 	if (firstAssigneeShow) {
