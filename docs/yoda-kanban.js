@@ -97,7 +97,7 @@ var firstLabelShow = true;
 var urlLabelList = yoda.decodeUrlParam(null, "labellist");
 function updateIssueLabelList() {
 	issueLabels = [];
-	issueLabelFiltered = [];
+	//issueLabelFiltered = [];
 	for (var i = 0; i < repoIssues.length; i++) {
 		for (var l = 0; l < repoIssues[i].labels.length; l++) {
 			var name = repoIssues[i].labels[l].name;
@@ -131,7 +131,7 @@ function updateIssueLabelList() {
 	}
 	
 	// Now add to selection list
-	//$("#labellist").empty();
+	$("#labellist").empty();
 	var labelsSelected = false;
 	for (var is = 0; is < issueLabels.length; is++) {
 		var selectLabel = false;
@@ -156,7 +156,7 @@ var urlAssigneeList = yoda.decodeUrlParam(null, "assigneelist");
 function updateAssigneeList() {
 	console.log("updateAssigneeList. first=" + firstAssigneeShow);
 	issueAssignees = []; 
-	issueAssigneesFiltered = []; 
+	//issueAssigneesFiltered = [];
 	
 	for (var i = 0; i < repoIssues.length; i++) {
 		for (var as = 0; as < repoIssues[i].assignees.length; as++) {
@@ -169,7 +169,7 @@ function updateAssigneeList() {
 	}
 	
 	issueAssignees.sort();
-	//$("#assigneelist").empty();
+	$("#assigneelist").empty();
 	
 	var selectAssigneeList = [];
 	if (firstAssigneeShow) {
